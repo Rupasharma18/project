@@ -4,10 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './pages/Signup';
 import './App.css'
 import login from './pages/login';
-import Home from './pages/Home'
+import  CreatePost from './components/CreatePost'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import './App.css';
-import CreatePost from './components/CreatePost';
+import Profile from './components/profile';
+import Home from './pages/Home'
+import edit from './components/edit';
 
 export default class App extends Component {
   render() {
@@ -19,7 +20,8 @@ export default class App extends Component {
           </Switch>
          <Switch>
          <Route path="/home" component={Home} />
-         {/* <Route exact path="/home" component={CreatePost} /> */}
+         <Route path="/profile" component={Profile} />
+         <Route exact path="/edit" component={edit} />
          <div className="auth-wrapper">
             <div className="auth-inner">
               {/* <Signup/> */}
@@ -35,3 +37,6 @@ export default class App extends Component {
   }
 }
 ;
+// i
+// }
+// ;

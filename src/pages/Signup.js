@@ -24,9 +24,9 @@ class Register extends Component {
       email: this.state.email,
       password: this.state.password
     }
-    console.log(JSON.stringify(newUser), "zebaSwati")
+    // console.log(JSON.stringify(newUser), "zebaSwati")
 
-    axios.post("http://localhost:8000/register", { params: newUser })
+    axios.post("http://localhost:8000/register",{params:newUser})
       .then(res => {
         console.log(res, "Rashmi");
         window.localStorage.setItem('token', res.data);
